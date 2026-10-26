@@ -7,7 +7,7 @@ from google.genai import types
 # ----------------------------------------------------------------------
 # Configuración
 # ----------------------------------------------------------------------
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-3.8-flash"
 MAX_TURNS = 3
 ROLES = [
     "Desarrollador Python Junior",
@@ -29,7 +29,7 @@ st.set_page_config(page_title="Simulador de Entrevistas Técnicas", page_icon="�
 def get_client():
     api_key = None
     try:
-        api_key = st.secrets["GEMINI_API_KEY"]
+        api_key = st.secrets["C"]
     except Exception:
         api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
